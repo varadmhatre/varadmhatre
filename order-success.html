@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Placed – QuickStationery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="order-success">
+  <header class="top-bar">
+    <div class="logo" onclick="window.location.href='index.html'">
+      <span class="logo-icon">QS</span>
+      <span class="logo-text">QuickStationery</span>
+    </div>
+  </header>
+
+  <main class="page center-page">
+    <div class="card success-card">
+      <h1>🎉 Order placed!</h1>
+      <p>Your stationery will “arrive” instantly – this is a demo, but the flow is real.</p>
+      <div class="success-meta">
+        <p>Order ID: <span id="orderId"></span></p>
+        <p>Total paid: ₹<span id="orderTotal"></span></p>
+      </div>
+      <button class="btn btn-primary" onclick="window.location.href='shop.html'">
+        Continue shopping
+      </button>
+    </div>
+  </main>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

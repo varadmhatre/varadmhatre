@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up – QuickStationery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="signup">
+  <header class="top-bar">
+    <div class="logo" onclick="window.location.href='index.html'">
+      <span class="logo-icon">QS</span>
+      <span class="logo-text">QuickStationery</span>
+    </div>
+  </header>
+
+  <main class="page auth-page">
+    <div class="card auth-card">
+      <h1>Create an account</h1>
+      <p class="muted">Save your cart, track orders & reorder faster.</p>
+
+      <form id="signupForm">
+        <label>
+          Full name
+          <input type="text" id="signupName" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="signupEmail" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="signupPassword" minlength="6" required />
+        </label>
+        <button class="btn btn-primary" type="submit">Sign up</button>
+        <p class="muted small">
+          Already have an account?
+          <a href="login.html">Log in</a>
+        </p>
+        <p id="signupError" class="error-text"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop – QuickStationery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="shop">
+  <header class="top-bar">
+    <div class="logo" onclick="window.location.href='index.html'">
+      <span class="logo-icon">QS</span>
+      <span class="logo-text">QuickStationery</span>
+    </div>
+    <div class="search-wrapper">
+      <input type="text" id="shopSearch" placeholder="Search stationery..." />
+      <button class="btn btn-primary" onclick="filterProducts()">Search</button>
+    </div>
+    <nav class="nav-links">
+      <a href="shop.html" class="active">Shop</a>
+      <a href="profile.html" id="navProfileLink">Profile</a>
+      <button class="btn btn-ghost" id="navAuthButton" onclick="handleAuthClick()">Login</button>
+      <button class="cart-badge" onclick="window.location.href='cart.html'">
+        🛒 <span id="cartCount">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="filters">
+      <div class="chip-group">
+        <button class="chip chip-active" data-category="all" onclick="setCategoryFilter('all', this)">All</button>
+        <button class="chip" data-category="notebooks" onclick="setCategoryFilter('notebooks', this)">Notebooks</button>
+        <button class="chip" data-category="pens" onclick="setCategoryFilter('pens', this)">Pens</button>
+        <button class="chip" data-category="art" onclick="setCategoryFilter('art', this)">Art & Craft</button>
+        <button class="chip" data-category="supplies" onclick="setCategoryFilter('supplies', this)">Supplies</button>
+      </div>
+    </section>
+
+    <section class="products-grid" id="productsGrid">
+      <!-- Products injected by JS from app.js -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Need something specific? Use search or filters above.</p>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

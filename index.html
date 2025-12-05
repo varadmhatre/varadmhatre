@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuickStationery – Fast Stationery Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="home">
+  <header class="top-bar">
+    <div class="logo" onclick="window.location.href='index.html'">
+      <span class="logo-icon">QS</span>
+      <span class="logo-text">QuickStationery</span>
+    </div>
+    <div class="search-wrapper">
+      <input type="text" id="globalSearch" placeholder="Search pens, notebooks, markers..." />
+      <button class="btn btn-primary" onclick="handleGlobalSearch()">Search</button>
+    </div>
+    <nav class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="profile.html" id="navProfileLink">Profile</a>
+      <button class="btn btn-ghost" id="navAuthButton" onclick="handleAuthClick()">Login</button>
+      <button class="cart-badge" onclick="window.location.href='cart.html'">
+        🛒 <span id="cartCount">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Stationery in <span class="accent">minutes</span>, not days.</h1>
+        <p>All your notebooks, pens, art supplies & more – delivered fast, just like Blinkit vibes but stationery-only.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="window.location.href='shop.html'">
+            Start Shopping
+          </button>
+          <button class="btn btn-outline" onclick="scrollToSection('categories')">
+            Browse Categories
+          </button>
+        </div>
+        <p class="hero-note">No login needed to browse. Sign up at checkout for a smoother ride.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-floating">
+          <h3>Today’s quick picks</h3>
+          <ul>
+            <li>🔥 Smooth gel pens</li>
+            <li>📒 A5 dotted notebooks</li>
+            <li>🎨 Brush markers</li>
+          </ul>
+        </div>
+        <div class="hero-pulse"></div>
+      </div>
+    </section>
+
+    <section id="categories" class="categories">
+      <h2>Shop by category</h2>
+      <div class="grid cards-3">
+        <div class="card category" onclick="goToShopWithFilter('notebooks')">
+          <h3>Notebooks</h3>
+          <p>College, spiral, dotted, planner-style.</p>
+        </div>
+        <div class="card category" onclick="goToShopWithFilter('pens')">
+          <h3>Pens & Writing</h3>
+          <p>Gel, ball, fountain, highlighters.</p>
+        </div>
+        <div class="card category" onclick="goToShopWithFilter('art')">
+          <h3>Art & Craft</h3>
+          <p>Markers, sketchbooks, colors, tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why QuickStationery?</h2>
+      <div class="grid cards-3">
+        <div class="card">
+          <h3>Ultra-fast experience</h3>
+          <p>Smooth UI, no lag, no drama. Browse and checkout in seconds.</p>
+        </div>
+        <div class="card">
+          <h3>Curated for students</h3>
+          <p>Everything you actually use: exam pads, loose sheets, sticky notes, and more.</p>
+        </div>
+        <div class="card">
+          <h3>Cart you can trust</h3>
+          <p>Add, remove, tweak quantities – all stored locally in your browser.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> QuickStationery. Built for practice & demos.</p>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
